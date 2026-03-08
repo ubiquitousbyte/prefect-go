@@ -18,7 +18,7 @@
 //	}
 //
 //	// Check server health
-//	resp, err := client.HealthCheck(context.Background())
+//	resp, err := client.HealthCheckHealthGet(context.Background())
 //	if err != nil {
 //	    log.Fatal(err)
 //	}
