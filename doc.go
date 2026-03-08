@@ -144,7 +144,7 @@
 // https://docs.prefect.io/api-ref/rest-api/
 //
 // For this package's Go documentation:
-// https://pkg.go.dev/github.com/ubiquitousbyte/prefect-go/prefect
+// https://pkg.go.dev/github.com/ubiquitousbyte/prefect-go
 //
 // For the OpenAPI specification used:
 // Generated from Prefect 3.6.21 OpenAPI 3.1 specification
