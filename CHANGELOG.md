@@ -40,7 +40,7 @@ This is the initial experimental release of prefect-go. This SDK uses **oapi-cod
 
 - Code generator produces invalid `ApplyDefaults()` functions for 3 union types (workaround applied in generated code)
 - Cannot exclude these invalid functions via config (inline `anyOf` types, not separate schemas)
-- Manual fix required after each code generation: comment out 3 problematic lines in `prefect/client.gen.go`
+- Manual fix required after each code generation: Fix up problematic lines in `prefect/client.gen.go`
 
 ### Supported Prefect Versions
 
