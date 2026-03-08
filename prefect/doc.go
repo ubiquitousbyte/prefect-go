@@ -42,7 +42,7 @@
 //	if err != nil {
 //	    log.Fatal(err)
 //	}
-//	log.Printf("Prefect version: %s", *version)
+//	log.Printf("Prefect version: %s", version)
 //
 // # Client Types
 //

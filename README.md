@@ -94,12 +94,12 @@ func main() {
     }
 
     // Get server version info
-    version, err := client.HealthCheckHealthGet(context.Background())
+    version, err := client.ServerVersionVersionGet(context.Background())
     if err != nil {
         log.Fatal(err)
     }
 
-    log.Printf("Prefect version: %s", *version)
+    log.Printf("Prefect version: %s", version)
 }
 ```
 
