@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/ubiquitousbyte/prefect-go/prefect"
+	"github.com/ubiquitousbyte/prefect-go"
 )
 
 func main() {
