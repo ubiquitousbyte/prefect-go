@@ -1,0 +1,5 @@
+package: prefect
+output: prefect/client.gen.go
+generation:
+  client: true
+  simple-client: true
