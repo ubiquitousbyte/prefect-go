@@ -226,24 +226,6 @@ make test
 make all
 ```
 
-### Project Structure
-
-```
-prefect-go/
-├── prefect/              # Main package
-│   ├── client.gen.go     # Generated client code
-│   ├── auth.go           # Authentication helpers
-│   └── doc.go            # Package documentation
-├── specs/                # OpenAPI specifications
-│   ├── 3.6.21/
-│   │   └── openapi.json
-│   └── latest -> 3.6.21/
-├── examples/             # Usage examples
-├── config/               # Code generation config
-├── scripts/              # Utility scripts
-└── Makefile              # Build automation
-```
-
 ## Supported Prefect Versions
 
 This SDK is generated from Prefect's OpenAPI specification. It should work with:
