@@ -45,7 +45,7 @@ package main
 import (
     "context"
     "log"
-    
+
     "github.com/ubiquitousbyte/prefect-go/prefect"
 )
 
@@ -55,13 +55,13 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    
+
     // Check health
     resp, err := client.HealthCheckHealthGet(context.Background())
     if err != nil {
         log.Fatal(err)
     }
-    
+
     log.Printf("Server status: %+v", resp)
 }
 ```
@@ -75,13 +75,13 @@ import (
     "context"
     "log"
     "os"
-    
+
     "github.com/ubiquitousbyte/prefect-go/prefect"
 )
 
 func main() {
     apiKey := os.Getenv("PREFECT_API_KEY")
-    
+
     // Create authenticated client
     client, err := prefect.NewSimpleClient(
         "https://api.prefect.cloud",
@@ -92,13 +92,13 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
-    
+
     // Get server version info
     version, err := client.HealthCheckHealthGet(context.Background())
     if err != nil {
         log.Fatal(err)
     }
-    
+
     log.Printf("Prefect version: %s", *version)
 }
 ```
