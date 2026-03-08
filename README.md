@@ -153,9 +153,8 @@ client, err := prefect.NewSimpleClient(
 
 Complete working examples are available in the [`examples/`](examples/) directory:
 
-- [`examples/basic/`](examples/basic/) - Basic usage with a local Prefect server
 - [`examples/cloud/`](examples/cloud/) - Prefect Cloud integration with authentication
-- [`examples/selfhosted/`](examples/selfhosted/) - Self-hosted server with flow creation
+- [`examples/selfhosted/`](examples/selfhosted/) - Basic usage with a local Prefect server
 
 ## API Coverage
 
