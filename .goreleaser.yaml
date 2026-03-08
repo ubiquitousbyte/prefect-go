@@ -1,0 +1,69 @@
+# GoReleaser configuration for prefect-go library releases
+# This project is a Go library (not a CLI tool), so we skip binary builds
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+
+version: 2
+
+before:
+  hooks:
+    # Ensure dependencies are tidy before release
+    - go mod tidy
+    - go mod verify
+
+# Skip builds - this is a library, not a binary distribution
+builds:
+  - skip: true
+
+# Generate changelog from git commits
+changelog:
+  sort: asc
+  use: github
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - "^ci:"
+  groups:
+    - title: Features
+      regexp: '^.*?feat(\([[:word:]]+\))??!?:.+$'
+      order: 0
+    - title: Bug Fixes
+      regexp: '^.*?fix(\([[:word:]]+\))??!?:.+$'
+      order: 1
+    - title: Others
+      order: 999
+
+# Release configuration
+release:
+  github:
+    owner: ubiquitousbyte
+    name: prefect-go
+
+  # Mark as pre-release (experimental status)
+  prerelease: auto
+
+  # Release notes template
+  header: |
+    ## ⚠️ Experimental Release
+
+    This SDK uses **oapi-codegen-exp** (experimental) to support OpenAPI 3.1. It is not ready for production use.
+
+    See the [README](https://github.com/ubiquitousbyte/prefect-go#%EF%B8%8F-experimental-status) for important warnings and limitations.
+
+  footer: |
+    ---
+
+    ## Installation
+
+    ```bash
+    go get github.com/ubiquitousbyte/prefect-go@{{ .Tag }}
+    ```
+
+    ## Resources
+
+    - [Documentation](https://pkg.go.dev/github.com/ubiquitousbyte/prefect-go)
+    - [Prefect API Reference](https://docs.prefect.io/api-ref/rest-api/)
+    - [Report Issues](https://github.com/ubiquitousbyte/prefect-go/issues)
+
+    Released with [GoReleaser](https://goreleaser.com)

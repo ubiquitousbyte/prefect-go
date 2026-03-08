@@ -34,3 +34,6 @@ specs/
 examples/*/basic
 examples/*/cloud
 examples/*/selfhosted
+
+# Added by goreleaser init:
+dist/
